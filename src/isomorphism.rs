@@ -117,7 +117,7 @@ where
                     .iter()
                     .enumerate()
                     .max_by_key(|&(_, &node)| {
-                        (conn_in[node], dout[node], conn_out[node], din[node])
+                        (conn_in[node], dout[node], conn_out[node], din[node], -1 * node as isize)
                     })
                     .unwrap();
 
